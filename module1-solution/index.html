@@ -8,22 +8,25 @@
       .message { font-size: 1.3em; font-weight: bold; }
     </style>
   </head>
-<body>
+<body ng-app="LunchCheck">
    <div class="container">
      <h1>Lunch Checker</h1>
-
+     <div ng-controller="LunchCheckController">
          <div class="form-group">
              <input id="lunch-menu" type="text"
-             placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control">
+             placeholder="list comma separated dishes you usually have for lunch, empty item is not considered."
+             class="form-control"  ng-model="lunchString">
+
          </div>
          <div class="form-group">
-             <button class="btn btn-default">Check If Too Much</button>
+             <button ng-click="check()">Check If Too Much</button>
          </div>
          <div class="form-group message">
-           <!-- Your message can go here. -->
+           {{result}}
          </div>
+      </div>
    </div>
-
+   <script src="angular.min.js"></script>
+   <script src="app.js"></script>
 </body>
 </html>
