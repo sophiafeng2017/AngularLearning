@@ -50,3 +50,10 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
+
+#list {
+  display: block;
+  float: left;
+  position: relative;
+  margin-left: 40px;
+}
