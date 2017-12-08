@@ -1,0 +1,28 @@
+<div id="main-content" class="container">
+
+  <h1>My Info</h1>
+  <div class="userInfo col-md-8">
+    <div class="row"  ng-if="infoCtrl.state == true">
+        <div class="col-sm-5 col-md-12">
+          <div class="userInfo">
+            <p>Name:  {{infoCtrl.userInfo.firstname}} &nbsp; {{infoCtrl.userInfo.lastname}} </p>
+            <p>Email:  {{infoCtrl.userInfo.email}}</p>
+            <p>Phone:  {{infoCtrl.userInfo.phone}}</p>
+          </div>
+          <p>Favorite menu: {{infoCtrl.favoriteItem.name}}
+            <div class="menu-item-details">{{infoCtrl.favoriteItem.description}}</div>
+            <div class="menu-item-photo col-sm-7">
+              <div>{{infoCtrl.favoriteItem.short_name}}</div>
+              <img class="img-responsive" width="250" height="150"
+                ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.favoriteItem.short_name}}.jpg" alt="{{infoCtrl.favoriteItem.name}}">
+            </div>
+
+          </p>
+      </div>
+      <hr class="visible-xs">
+    </div>
+
+    <div id="info" ng-if="infoCtrl.state == false">
+      <span>Not Signed Up Yet. Sign up Now!</span>
+    </div>
+  </div>
